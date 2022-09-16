@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { verify } from 'jsonwebtoken';
-
+import 'dotenv/config';
 import authConfig from '../../../../config/auth';
 import { JWTInvalidTokenError } from "../../../errors/JWTInvalidTokenError";
 import { JWTTokenMissingError } from "../../../errors/JWTTokenMissingError";
