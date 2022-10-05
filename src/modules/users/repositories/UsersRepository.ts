@@ -26,4 +26,9 @@ export class UsersRepository implements IUsersRepository {
 
     return this.repository.save(user);
   }
+
+  async findBySenderId(sender_id: string): Promise<User | undefined> {
+    const user_id = sender_id;
+    return this.repository.findOne(user_id);
+  }
 }
